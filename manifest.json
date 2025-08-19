@@ -2,5 +2,8 @@
     "manifest_version": 3,
     "name": "Mindful Messaging",
     "version": "1.0",
-    "description": "A browser add-on to delay sending messages for mindful communication."
+    "description": "A browser add-on to delay sending messages for mindful communication.",
+    "action": {
+      "default_popup": "popup.html"
+    }
   }
