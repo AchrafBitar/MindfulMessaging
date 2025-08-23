@@ -1,5 +1,5 @@
 {
-  "name": "mindful-messaging",
+  "name": "@mindful/common",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
