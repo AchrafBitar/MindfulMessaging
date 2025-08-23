@@ -1,5 +1,5 @@
 {
-  "name": "mindful-messaging",
+  "name": "common",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,8 +9,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.15.0",
-  "dependencies": {
-    "zod": "^4.1.0"
-  }
+  "packageManager": "pnpm@10.15.0"
 }
