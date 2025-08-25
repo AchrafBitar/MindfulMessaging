@@ -1,0 +1,65 @@
+{
+    "build": {
+      "beforeDevCommand": "pnpm --filter desktop dev",
+      "beforeBuildCommand": "pnpm --filter desktop build",
+      "devUrl": "http://localhost:1420",
+      "frontendDist": "../dist"
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ]
+    },
+    "identifier": "com.mindful.messaging",
+    "version": "0.1.0",
+    "app": {
+      "windows": [
+        {
+          "label": "main",
+          "title": "Mindful Messaging Assistant",
+          "width": 450,
+          "height": 600,
+          "decorations": false,
+          "transparent": true,
+          "alwaysOnTop": true,
+          "visible": false,
+          "resizable": false,
+          "skipTaskbar": true,
+          "fullscreen": false,
+          "center": true
+        }
+      ],
+      "security": {
+        "csp": null
+      }
+    },
+    "plugins": {
+      "tauri": {
+        "allowlist": {
+          "all": false,
+          "app": {
+            "all": true
+          },
+          "window": {
+            "all": true
+          },
+          "shell": {
+            "open": true
+          },
+          "clipboard": {
+            "readText": true,
+            "writeText": true
+          },
+          "globalShortcut": {
+            "all": true
+          }
+        }
+      }
+    }
+  }

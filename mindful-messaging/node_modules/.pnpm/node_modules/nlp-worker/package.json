@@ -1,5 +1,5 @@
 {
-  "name": "nlp-worker",
+  "name": "@mindful/nlp-worker",
   "version": "1.0.0",
   "description": "Core on-device NLP logic (transformers.js)",
   "type": "module",

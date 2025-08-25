@@ -9,7 +9,11 @@
       "forceConsistentCasingInFileNames": true,
       "strict": true,
       "skipLibCheck": true,
-      "allowSyntheticDefaultImports": true
+      "allowSyntheticDefaultImports": true,
+      "baseUrl": ".",
+      "paths": {
+        "@mindful/common/*": ["packages/common/src/*"] 
+      }
     },
     "include": ["src"]
   }

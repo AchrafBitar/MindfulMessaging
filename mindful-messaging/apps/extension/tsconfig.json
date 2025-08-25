@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+      "jsx": "react-jsx",
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "types": ["chrome"]
+    },
+    "extends": "../../tsconfig.json",
+    "include": ["src"]
+  }

@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Mindful Messaging Assistant",
+    "version": "0.1.0",
+    "description": "Extracts insights and suggests replies from conversations.",
+    "permissions": [
+      "storage",
+      "activeTab",
+      "scripting",
+      "contextMenus"
+    ],
+    "host_permissions": [
+      "https://web.whatsapp.com/",
+      "https://mail.google.com/",
+      "https://*.messenger.com/",
+      "https://web.telegram.org/",
+      "https://app.slack.com/"
+    ],
+    "background": {
+      "service_worker": "src/background.ts"
+    },
+    "action": {
+      "default_title": "Analyze with Mindful",
+      "default_popup": "index.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["src/content/injector.ts"]
+      }
+    ]
+  }

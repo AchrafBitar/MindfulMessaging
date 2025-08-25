@@ -1,0 +1,114 @@
+:root {
+    --bg-color: #1e1e1e;
+    --text-color: #dcdcdc;
+    --primary-color: #64ffda;
+    --primary-text: #0d1121;
+    --secondary-bg: #2a2a2a;
+    --border-color: #444;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.container {
+    padding: 1rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+header h2 {
+    margin: 0 0 1rem 0;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+    min-height: 100px;
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+button {
+    background: var(--primary-color);
+    color: var(--primary-text);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+button:hover {
+    background-color: #52e6c6;
+}
+
+button:disabled {
+    background-color: #444;
+    color: #888;
+    cursor: not-allowed;
+}
+
+.results-container {
+    margin-top: 1.5rem;
+    overflow-y: auto;
+}
+
+.insights-section h3, .replies-section h3 {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.insight-group h4 { margin: 0.5rem 0; }
+.insight-group ul { padding-left: 20px; margin: 0; }
+
+.replies-grid {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.reply-btn {
+    text-align: left;
+    background: var(--secondary-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+.reply-btn.firm { border-left: 3px solid #ff6b6b; }
+.reply-btn.calm { border-left: 3px solid #4d94ff; }
+.reply-btn.warm { border-left: 3px solid #64ffda; }
+.reply-btn:hover { background-color: #3c3c3c; }
+
+.notification {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2e7d32;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.placeholder {
+    text-align: center;
+    color: #888;
+    margin-top: 2rem;
+}
