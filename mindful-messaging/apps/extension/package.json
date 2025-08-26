@@ -1,12 +1,28 @@
 {
   "name": "extension",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Mindful Messaging Assistant - Browser Extension",
+  "type": "module",
   "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "dependencies": {
+    "@mindful/common": "workspace:*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@types/chrome": "^0.0.254",
+    "@vitejs/plugin-react": "^4.2.1",
+    "typescript": "^5.0.2",
+    "vite": "^5.0.0"
+  },
+  "keywords": ["browser-extension", "ai", "messaging", "mindful"],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.15.0"
