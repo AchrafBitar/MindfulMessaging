@@ -170,34 +170,11 @@ The extension supports Hugging Face API for enhanced AI features:
 - ✅ Linux
 
 ### Browsers
+
+- ✅ Opera/OperaGX
 - ✅ Chrome/Chromium
 - 🔄 Firefox (planned)
 - 🔄 Safari (planned)
-
-## 🧪 Testing
-
-### Test Messages
-Try these sample messages to test the AI:
-
-**Task Detection:**
-```
-"I need to finish the project by Friday and send it to John Smith"
-```
-
-**Date Extraction:**
-```
-"Let's meet tomorrow at 3pm for the team discussion"
-```
-
-**Risk Assessment:**
-```
-"This is urgent - we have a problem with the deadline"
-```
-
-**Question Analysis:**
-```
-"Can you help me understand the new requirements?"
-```
 
 ## 🤝 Contributing
 
