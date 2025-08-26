@@ -190,10 +190,6 @@ The extension supports Hugging Face API for enhanced AI features:
 - Test on multiple platforms
 - Update documentation for new features
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - **Hugging Face** for providing excellent AI models
