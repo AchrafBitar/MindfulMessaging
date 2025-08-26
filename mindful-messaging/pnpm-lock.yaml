@@ -25,7 +25,7 @@ importers:
         specifier: workspace:*
         version: link:../../packages/nlp-worker
       '@tauri-apps/api':
-        specifier: ^2.0.0-rc.0
+        specifier: ^2.0.0
         version: 2.8.0
       react:
         specifier: ^18.2.0
@@ -35,7 +35,7 @@ importers:
         version: 18.3.1(react@18.3.1)
     devDependencies:
       '@tauri-apps/cli':
-        specifier: ^2.0.0-rc.0
+        specifier: ^2.0.0
         version: 2.8.2
       '@types/react':
         specifier: ^18.2.15

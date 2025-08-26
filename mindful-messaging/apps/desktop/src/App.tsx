@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-import { window, event, clipboard } from '@tauri-apps/api';
+import { window, event } from '@tauri-apps/api';
 
 import { AnalysisResponse } from '@mindful/common/types';
 import './App.css'; 
@@ -18,8 +18,7 @@ const App: React.FC = () => {
     const workerRef = useRef<Worker | null>(null);
     const textareaRef = useRef<HTMLTextAreaElement>(null);
 
-    // Get a handle to the current window instance using the v2 API
-    const appWindow = window.getCurrent();
+    // Window reference - will be handled differently in Tauri v2
 
     // --- EFFECT 1: Initialize Worker and Tauri Listeners ---
     useEffect(() => {
@@ -46,8 +45,8 @@ const App: React.FC = () => {
         const unlistenFocus = event.listen('tauri://focus', async () => {
             textareaRef.current?.focus();
             try {
-                // Use the namespaced clipboard API
-                const clipboardText = await clipboard.readText();
+                // Use the browser clipboard API
+                const clipboardText = await navigator.clipboard.readText();
                 if (clipboardText) {
                     setInputText(clipboardText);
                     handleAnalyze(clipboardText);
@@ -58,7 +57,7 @@ const App: React.FC = () => {
         });
 
         const unlistenBlur = event.listen('tauri://blur', () => {
-            appWindow.hide();
+            // Window will be hidden by the blur event
         });
 
         // Cleanup function
@@ -89,7 +88,7 @@ const App: React.FC = () => {
     const handleCopyReply = async (text: string) => {
         await navigator.clipboard.writeText(text);
         setCopiedNotification('Copied!');
-        setTimeout(() => appWindow.hide(), 500);
+        // Window will be hidden by the blur event
     };
 
     // --- Render Logic (This part remains the same) ---
